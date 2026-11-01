@@ -6,6 +6,19 @@
   <title>16 GOTI X — Sholo Guti Strategy</title>
   <meta name="theme-color" content="#0a1432" />
   <link rel="manifest" href="manifest.webmanifest" />
+  <style>
+    /* Fit the real visible screen in mobile browsers (URL bar / bottom bar) so the bottom player bar + chat buttons never get cut off */
+    html { height: 100%; }
+    body.h-screen { height: 100vh !important; height: 100dvh !important; height: var(--app-h, 100dvh) !important; }
+  </style>
+  <script>
+    (function () {
+      var set = function () { document.documentElement.style.setProperty('--app-h', window.innerHeight + 'px'); };
+      if (!(window.CSS && CSS.supports && CSS.supports('height', '100dvh'))) {
+        set(); window.addEventListener('resize', set); window.addEventListener('orientationchange', set);
+      }
+    })();
+  </script>
   <link rel="icon" type="image/png" href="icon-192.png" />
   <link rel="apple-touch-icon" href="icon-192.png" />
   <meta name="mobile-web-app-capable" content="yes" />

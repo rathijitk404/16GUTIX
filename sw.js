@@ -1,6 +1,6 @@
 /* 16 GOTI X service worker: offline-capable app shell.
    Bump VERSION whenever you upload a new index.html so players get the update. */
-const VERSION = 'goti-x-v1';
+const VERSION = 'goti-x-v2';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (e) => {
